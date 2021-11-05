@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页记录列表布局 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="45dp">
+    
+    <!-- 记录列表,用RecyclerView展示 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/record_list_recyclerview"
+        android:background="@color/record_list_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- 添加悬浮按钮 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_record"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@mipmap/ico_add"
+        android:contentDescription="@string/float_btn_add_description" />
+
+</FrameLayout>

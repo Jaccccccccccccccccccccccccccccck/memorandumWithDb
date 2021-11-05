@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RecyclerView 的子项布局 该布局展示一条记录-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_background">
+
+    <!-- 显示是否已完成 -->
+    <!-- 显示标题 -->
+
+    <CheckBox
+        android:id="@+id/record_item_completed"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity=""
+        android:text="@string/record_uncompleted_text" />
+
+    <TextView
+        android:id="@+id/record_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <!-- 显示部分内容 -->
+    <TextView
+        android:id="@+id/record_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:textSize="16sp"
+        android:ellipsize="end"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line"/>
+    <!-- 显示截止日期 -->
+    <TextView
+        android:id="@+id/record_item_cutoff_date"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

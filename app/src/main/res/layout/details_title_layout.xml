@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/title_background"
+    android:layout_height="wrap_content"
+    android:id="@+id/details_title"
+    android:visibility="invisible">
+
+    <!-- 详情页、新增页标题栏布局 -->
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:layout_marginStart="10dp"
+        android:src="@mipmap/ico_back" />
+
+    <TextView
+        android:id="@+id/details_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="110dp"
+        android:hint="@string/details_title_text"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

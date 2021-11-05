@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 备忘录详情页 展示记录的具体内容(标题、内容、截止日期...)-->
+
+<!-- 最外层线性布局 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="13dp">
+
+    <!-- 标题编辑框 -->
+    <EditText
+        android:id="@+id/record_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:singleLine="true"
+        android:hint="@string/record_title_hint"/>
+
+    <!-- 内层线性布局 包含文本内容和图片内容 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:isScrollContainer="true">
+
+        <!-- 便签内容编辑框 -->
+        <EditText
+            android:id="@+id/record_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/record_content_hint"
+            android:maxLines="10">
+
+        </EditText>
+        <ScrollView
+            android:id="@+id/scroll_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+            <ImageView
+                android:id="@+id/content_image_view"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </ScrollView>
+        <!-- 显示内容中插入的图片 -->
+
+    </LinearLayout>
+
+    <!-- 内层线性布局 包含记录日期、重要程度选择、截止日期、是否已完成、插入图片、拍照 -->
+    <LinearLayout
+        android:id="@+id/details_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_weight="3"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <!-- 第一行 包括记录的生成日期和 重要程度 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/record_importance_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="8"
+                android:textSize="16sp"
+                android:hint="@string/record_importance_text" />
+            <Spinner
+                android:id="@+id/importance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:entries="@array/spinner_arrays" />
+        </LinearLayout>
+
+        <!-- 第二行 包括记录的截止日期和 是否已完成 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!-- 显示和设置该条记录的截止日期 -->
+            <TextView
+                android:id="@+id/record_cutoff_date_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="8"
+                android:textSize="16sp"
+                android:hint="@string/record_cutoff_date_text" />
+
+            <!-- 该条备忘录是否已经完成 -->
+            <CheckBox
+                android:id="@+id/is_completed"
+                android:layout_width="96dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/record_uncompleted_text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="@color/black"/>
+        <!-- 第三行 包括插入图片和拍照、删除 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <!-- 添加图片按钮 -->
+            <ImageButton
+                android:id="@+id/add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@mipmap/ico_insert_picture"
+                />
+
+            <!-- 拍摄图片按钮 -->
+            <ImageButton
+                android:id="@+id/take_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@mipmap/ico_camera"
+                 />
+            <!-- 设置截止日期 -->
+            <ImageButton
+                android:id="@+id/record_cutoff_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@mipmap/ico_cutoff_date"/>
+            <!-- 删除记录按钮 -->
+            <ImageButton
+                android:id="@+id/record_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@mipmap/ico_delete"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <!-- 应用名称 -->
+    <string name="app_name">备忘录</string>
+
+    <!-- 详情页编辑框hint -->
+    <string name="record_title_hint">标题</string>
+    <string name="record_content_hint">内容</string>
+
+    <!-- 搜索框提示信息 -->
+    <string name="search_hint">输入记录内容</string>
+
+    <!-- 悬浮按钮内容描述 -->
+    <string name="float_btn_add_description">添加记录</string>
+
+    <!-- 详情页标题 -->
+    <string name="details_title_text">记录详情</string>
+
+    <!-- 新增页标题 -->
+    <string name="add_new_title_text">创建记录</string>
+
+    <!-- 记录完成情况 -->
+    <string name="record_completed_text">已完成</string>
+    <string name="record_uncompleted_text">待完成</string>
+
+    <!-- 记录删除 -->
+    <string name="record_delete_dialog_is_confirm">您确定要删除该条记录吗?</string>
+    <string name="record_delete_dialog_ok">确定</string>
+    <string name="record_delete_dialog_cancel">取消</string>
+    <string name="record_delete_success">删除成功！</string>
+    <string name="record_delete_failed">删除失败,系统出错！</string>
+    
+    <!-- 重要程度提示文本 -->
+    <string name="record_importance_text">重要程度:</string>
+    
+    <!-- 截止日期提示文本 -->
+    <string name="record_cutoff_date_text">截止日期:</string>
+</resources>
